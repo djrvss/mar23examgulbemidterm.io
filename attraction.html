@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractions in Digos City, Philippines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #fff;
+        }
+
+        .navbar .branding {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar img {
+            margin-right: 10px;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        .navbar p {
+            margin: 5px 0 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .navbar a {
+            color: #f2f2f2;
+            text-decoration: none;
+            padding: 14px 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        .navbar a.active {
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 10px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid ;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+
+        .attraction {
+            margin-bottom: 20px;
+        }
+
+        .attraction img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .animated-button1 {
+    position: absolute; /* Position absolute for precise placement */
+    bottom: 20px; /* Adjust this value for vertical positioning */
+    left: 20px; /* Adjust this value for horizontal positioning */
+    display: inline-block;
+    padding: 12px 50px;
+    border: none;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: #ffffffff;
+    box-shadow: 0 0 0 2px #ffffff20;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button1 span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #2196F3;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button1 span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button1:hover {
+  box-shadow: 0 0 0 5px #2195f360;
+  color: #ffffff;
+}
+
+.animated-button1:active {
+  scale: 0.95;
+}
+
+.animated-button1:hover span:last-child {
+  width: 200px;
+  height: 90px;
+  opacity: 1;
+}
+.animated-button1.active {
+  color: #ffcc00;
+}
+        .animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 50px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #ffffffff;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #2196F3;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 5px #2195f360;
+  color: #ffffff;
+}
+
+.animated-button:active {
+  scale: 0.95;
+}
+
+.animated-button:hover span:last-child {
+  width: 200px;
+  height: 90px;
+  opacity: 1;
+}
+.animated-button.active {
+  color: #ffcc00;
+}
+.card {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card img {
+  width: 250px;
+  height: 150px;
+  object-fit: fill;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover img {
+  transform: scale(0);
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  text-justify: auto;
+  color: #777;
+  line-height: 1;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+  <button class="animated-button" onclick="window.location.href='index.html'">
+    <img src="pic.png" alt="Digos City Logo" height="40">
+    <div>
+        <h1>Digos City Website</h1>
+        <p>Explore the beauty of Digos, Philippines</p>
+    </div>
+</button>
+    <div class="links">
+        <button class="animated-button" onclick="window.location.href='home.html'">
+            <span>Home</span>
+            <span></span>
+          </button>
+          <button class="animated-button" onclick="window.location.href='about.html'">
+            <span>About</span>
+            <span></span>
+          </button>
+          <button class="animated-button active" onclick="window.location.href='attraction.html'">
+            <span>Attraction</span>
+            <span></span>
+          </button>
+          <button class="animated-button" onclick="window.location.href='readmore.html'">
+            <span>Read More</span>
+            <span></span>
+        </button>
+          <button class="animated-button" onclick="window.location.href='contact.html'">
+            <span>Contact</span>
+            <span></span>
+          </button>
+    </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <img src="attr1.png" alt="Card Image">
+    <div class="card__content">
+        <p class="card__title">Eden Nature Park</p>
+        <p class="card__description">Nestled in Davao City, Eden Nature Park is filled with lush greenery and serene gardens that offer a peaceful urban escape.</p>
+        <button class="animated-button1" onclick="window.location.href='readmore.html#section1'">
+          <span>&raquo; Read More.</span>
+          <span></span>
+        </button>
+    </div>
+</div>
+
+  <div class="card">
+    <img src="attr2.png" alt="Card Image">
+    <div class="card__content">
+      <p class="card__title">Dawis Beach</p>
+      <p class="card__description">This pristine beach offers powdery white sands, crystal-clear waters, and swaying coconut trees, making it an ideal spot for relaxation and beachcombing.</p>
+      <button class="animated-button1" onclick="window.location.href='readmore.html#section2'">
+        <span>&raquo; Read More.</span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="attr3.png" alt="Card Image">
+    <div class="card__content">
+      <p class="card__title">Agong House</p>
+      <p class="card__description">This enchanting place offers visitors a glimpse into the vibrant Agong, a bronze musical instrument used by Mindanao’s indigenous groups, such as the Maranaos.</p>
+      <button class="animated-button1" onclick="window.location.href='readmore.html#section3'">
+        <span>&raquo; Read More.</span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="attr4.png" alt="Card Image">
+    <div class="card__content">
+      <p class="card__title">Tudeya Falls</p>
+      <p class="card__description">Surrounded by lush green forests, this hidden gem boasts a stunning 100-meter waterfall the tallest waterfall in Mount Apo Natural Park cascading into a crystal-clear pool and flows into the Sibulan River, leading to Davao Gulf.</p>
+      <button class="animated-button1" onclick="window.location.href='readmore.html#section4'">
+        <span>&raquo; Read More.</span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

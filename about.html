@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Digos City, Philippines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #fff;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar .branding {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar img {
+            margin-right: 10px;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        .navbar p {
+            margin: 5px 0 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .navbar a {
+            color: #f2f2f2;
+            text-decoration: none;
+            padding: 14px 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        .navbar a.active { /* Added */
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 170px auto 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            text-align: justify;
+        }
+        .animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 50px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #ffffffff;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #2196F3;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 5px #2195f360;
+  color: #ffffff;
+}
+
+.animated-button:active {
+  scale: 0.95;
+}
+
+.animated-button:hover span:last-child {
+  width: 190px;
+  height: 70px;
+  opacity: 1;
+}
+.animated-button.active {
+  color: #ffcc00; /* Change the color for the active state */
+}
+div.table-title {
+   display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 1000px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+  <button class="animated-button" onclick="window.location.href='index.html'">
+    <img src="pic.png" alt="Digos City Logo" height="40">
+    <div>
+        <h1>Digos City Website</h1>
+        <p>Explore the beauty of Digos, Philippines</p>
+    </div>
+</button>
+    <div class="links">
+        <button class="animated-button" onclick="window.location.href='home.html'">
+            <span>Home</span>
+            <span></span>
+          </button>
+          <button class="animated-button active" onclick="window.location.href='about.html'">
+            <span>About</span>
+            <span></span>
+          </button>
+          <button class="animated-button" onclick="window.location.href='attraction.html'">
+            <span>Attraction</span>
+            <span></span>
+          </button>
+          <button class="animated-button" onclick="window.location.href='readmore.html'">
+            <span>Read More</span>
+            <span></span>
+        </button>
+          <button class="animated-button" onclick="window.location.href='contact.html'">
+            <span>Contact</span>
+            <span></span>
+          </button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <h2>About Digos City</h2>
+        <p>Digos City is a first-class city and the capital of the province of Davao del Sur, Philippines. It is located in the southeastern part of Mindanao, known for its natural beauty and vibrant culture. Digos is a growing urban center with various attractions including parks, historical sites, and delicious local cuisine.</p>
+        <p>Whether you're interested in exploring nature, experiencing local festivals, or simply enjoying the warmth of Filipino hospitality, Digos has something to offer for everyone.</p>
+        <h2>History</h2>
+        <p>In the early days, Digos was a watercourse, a meeting place of inhabitants belonging to the Austronesians settled along the southern foothills of Mt. Apo. The rivers near the place was used by the people for fishing and bathing.</p>
+        <p>Digos in later years, before its conversion into a city, was regarded as the capital town of the Province of Davao del Sur, long before it gained the status of a First Class Municipality in 1993, being center for trade, commerce and education, accruing to its strategic location at the cross point of two principal thoroughfares in the south.</p>
+        <p>Municipality of Digos was changed into a component City of Davao del Sur, which was signed by President Joseph E. Estrada on July 14, 2000 and ratified by the Digoseños on September 8, 2000.</p>
+        <h2>Population/ Language/ Area</h2>
+        <p>Digos City’s land area ranges from hilly to mountainous in the north-northeast portion and flat and slightly rolling at the coastal barangays. The urban areas and the surrounding barangays in the south portion are flat. Climate in Digos falls under fourth type while wind direction is prevalent from northeast to southwest.</p>
+        <h2>Products and Services</h2>
+        <p>Agriculture is a major component of Digos City economy. Some 9,330 households or 37% of the total households are dependent on agriculture for their livelihood. Of the total households dependent on agriculture, 91% are engaged in farming and the remaining 9% in fishing. The total area devoted to agriculture covered 8, 944.1 hectares, representing 31% of the total land area of Digos. The more important agricultural crops grown in the area include coconut, sugarcane, mango and banana. Among the agricultural crops, the staple crops rice and corn are the most widely grown.</p>
+        <h2>Business Opportunity</h2>
+        <p>Being the largest urban center in Davao del Sur, Digos City is a good place for investment in the businesses such as housing projects, hotels, resorts, amusement parks, food establishments and processing, clothing and fashion accessories, financial services and electronics related businesses.</p>
+    </div>
+</div>
+<div class="table-title">
+  <h3>Barangays</h3>
+  <p>Digos has 26 barangays as shown in the following table.</p>
+  </div>
+
+  <table class="table-fill">
+    <thead>
+      <tr>
+        <th>Barangay</th>
+        <th>Population percentage (2020)</th>
+        <th>Population (2020)</th>
+        <th>Population (2015)</th>
+        <th>Change (2015‑2020)</th>
+        <th>Annual Population Growth Rate (2015‑2020)</th>
+      </tr>
+    </thead>
+      <tbody class="table-hover">
+        <tr><th><a>Aplaya</a></th><td>10.21%</td><td>19,234</td><td>18,485</td><td class='pcInc'>4.05%</td><td class='pcInc'>0.84%</td></tr>
+        <tr><th><a>Balabag</a></th><td>0.76%</td><td>1,434</td><td>1,377</td><td class='pcInc'>4.14%</td><td class='pcInc'>0.86%</td></tr>
+        <tr><th><a>Binaton</a></th><td>1.40%</td><td>2,645</td><td>2,599</td><td class='pcInc'>1.77%</td><td class='pcInc'>0.37%</td></tr>
+        <tr><th><a>Cogon</a></th><td>5.12%</td><td>9,650</td><td>7,998</td><td class='pcInc'>20.66%</td><td class='pcInc'>4.03%</td></tr>
+        <tr><th><a>Colorado</a></th><td>1.75%</td><td>3,301</td><td>2,732</td><td class='pcInc'>20.83%</td><td class='pcInc'>4.06%</td></tr>
+        <tr><th><a>Dawis</a></th><td>3.09%</td><td>5,814</td><td>4,959</td><td class='pcInc'>17.24%</td><td class='pcInc'>3.40%</td></tr>
+        <tr><th><a>Dulangan</a></th><td>1.01%</td><td>1,900</td><td>1,714</td><td class='pcInc'>10.85%</td><td class='pcInc'>2.19%</td></tr>
+        <tr><th><a>Goma</a></th><td>2.31%</td><td>4,358</td><td>4,093</td><td class='pcInc'>6.47%</td><td class='pcInc'>1.33%</td></tr>
+        <tr><th><a>Igpit</a></th><td>1.97%</td><td>3,713</td><td>3,502</td><td class='pcInc'>6.03%</td><td class='pcInc'>1.24%</td></tr>
+        <tr><th><a>Kapatagan</a></th><td>8.00%</td><td>15,070</td><td>11,982</td><td class='pcInc'>25.77%</td><td class='pcInc'>4.94%</td></tr>
+        <tr><th><a>Kiagot</a></th><td>3.28%</td><td>6,182</td><td>5,309</td><td class='pcInc'>16.44%</td><td class='pcInc'>3.26%</td></tr>
+        <tr><th><a>Lungag</a></th><td>0.35%</td><td>652</td><td>652</td><td class='pcSteady'>0.00%</td><td class='pcSteady'>0.00%</td></tr>
+        <tr><th><a>Mahayahay</a></th><td>0.59%</td><td>1,105</td><td>898</td><td class='pcInc'>23.05%</td><td class='pcInc'>4.46%</td></tr>
+        <tr><th><a>Matti</a></th><td>3.43%</td><td>6,460</td><td>6,016</td><td class='pcInc'>7.38%</td><td class='pcInc'>1.51%</td></tr>
+        <tr><th><a>Ruparan</a></th><td>2.27%</td><td>4,278</td><td>3,662</td><td class='pcInc'>16.82%</td><td class='pcInc'>3.33%</td></tr>
+        <tr><th><a>San Agustin</a></th><td>1.87%</td><td>3,530</td><td>2,784</td><td class='pcInc'>26.80%</td><td class='pcInc'>5.12%</td></tr>
+        <tr><th><a>San Jose</a></th><td>3.72%</td><td>7,009</td><td>6,564</td><td class='pcInc'>6.78%</td><td class='pcInc'>1.39%</td></tr>
+        <tr><th><a>San Miguel</a></th><td>9.19%</td><td>17,312</td><td>15,422</td><td class='pcInc'>12.26%</td><td class='pcInc'>2.46%</td></tr>
+        <tr><th><a>San Roque</a></th><td>0.88%</td><td>1,659</td><td>1,172</td><td class='pcInc'>41.55%</td><td class='pcInc'>7.59%</td></tr>
+        <tr><th><a>Sinawilan</a></th><td>3.09%</td><td>5,820</td><td>5,792</td><td class='pcInc'>0.48%</td><td class='pcInc'>0.10%</td></tr>
+        <tr><th><a>Soong</a></th><td>0.85%</td><td>1,602</td><td>1,378</td><td class='pcInc'>16.26%</td><td class='pcInc'>3.22%</td></tr>
+        <tr><th><a>Tiguman</a></th><td>1.64%</td><td>3,095</td><td>2,398</td><td class='pcInc'>29.07%</td><td class='pcInc'>5.52%</td></tr>
+        <tr><th><a>Tres de Mayo</a></th><td>10.61%</td><td>19,978</td><td>16,595</td><td class='pcInc'>20.39%</td><td class='pcInc'>3.98%</td></tr>
+        <tr><th><a>Zone 1</a></th><td>8.99%</td><td>16,942</td><td>15,023</td><td class='pcInc'>12.77%</td><td class='pcInc'>2.56%</td></tr>
+        <tr><th><a>Zone 2</a></th><td>4.02%</td><td>7,565</td><td>8,402</td><td class='pcDec'>-9.96%</td><td class='pcDec'>-2.18%</td></tr>
+        <tr><th><a>Zone 3</a></th><td>9.59%</td><td>18,068</td><td>17,885</td><td class='pcInc'>1.02%</td><td class='pcInc'>0.21%</td></tr>
+        </tbody>
+        <tfoot>
+          <tr id='tableTotals'><th scope='row' colspan='2'>Digos Total</th><td id='curPop'>188,376</td><td id='prevPop'>169,393</td><td id='totalPcChange' class='pcInc'>11.21%</td><td id='totalPagr' class='pcInc'>2.26%</td></tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

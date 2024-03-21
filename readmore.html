@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City of Digos, Philippines - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #fff;
+            top: 0;
+            width: 100%;
+
+        }
+        .img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .navbar .branding {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar img {
+            margin-right: 10px;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        .navbar p {
+            margin: 5px 0 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .navbar a {
+            color: #f2f2f2;
+            text-decoration: none;
+            padding: 14px 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto 20px;
+            padding: 100px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            margin: 10px 0 0;
+            font-size: 14px;
+            text-justify: auto;
+            color: #ffffff;
+            line-height: 1;
+        }
+        .animated-button {
+            position: relative;
+            display: inline-block;
+            padding: 12px 50px;
+            border: none;
+            font-size: 16px;
+            background-color: inherit;
+            border-radius: 100px;
+            font-weight: 600;
+            color: #ffffffff;
+            box-shadow: 0 0 0 2px #ffffff20;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .animated-button span:last-child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background-color: #2196F3;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .animated-button span:first-child {
+            position: relative;
+            z-index: 1;
+        }
+
+        .animated-button:hover {
+            box-shadow: 0 0 0 5px #2195f360;
+            color: #ffffff;
+        }
+
+        .animated-button:active {
+            scale: 0.95;
+        }
+
+        .animated-button:hover span:last-child {
+            width: 190px;
+            height: 80px;
+            opacity: 1;
+        }
+
+        .animated-button.active {
+            color: #ffcc00; /* Change the color for the active state */
+        }
+        .content p {
+            margin: 10px 0 0;
+  font-size: 15px;
+  text-justify: auto;
+  line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <button class="animated-button" onclick="window.location.href='index.html'">
+        <img src="pic.png" alt="Digos City Logo" height="40">
+        <div>
+            <h1>Digos City Website</h1>
+            <p>Explore the beauty of Digos, Philippines</p>
+        </div>
+    </button>
+    <div class="links">
+        <button class="animated-button" onclick="window.location.href='home.html'">
+            <span>Home</span>
+            <span></span>
+        </button>
+        <button class="animated-button" onclick="window.location.href='about.html'">
+            <span>About</span>
+            <span></span>
+        </button>
+        <button class="animated-button" onclick="window.location.href='attraction.html'">
+            <span>Attraction</span>
+            <span></span>
+        </button>
+        <button class="animated-button active" onclick="window.location.href='readmore.html'">
+            <span>Read More</span>
+            <span></span>
+        </button>
+        <button class="animated-button" onclick="window.location.href='contact.html'">
+            <span>Contact</span>
+            <span></span>
+        </button>
+    </div>
+</div>
+
+
+  <div class="container">
+    <div class="content">
+        <div id="section1">
+            <img src="attr1.png" alt="" height="500px">
+        <h2>1. Eden Nature Park</h2>
+            <p>Address: 29HX+MPJ, Toril, Davao City, 8000 Davao del Sur, Philippines</p>
+            <p>Open hours: Tuesday to Sunday,, from 08:00 AM to 05:00 PM</p>
+            <p>Nestled in Davao City, Eden Nature Park is filled with lush greenery and serene gardens that offer a peaceful urban escape. Located 3,000 meters above sea level and adorned with a natural canopy of trees, this park provides refreshing coolness, a welcome break from the city's heat.</p>
+            <p>You can explore the recreational activities here, including guided shuttle tour, skyrider, skycycle, skyswing, horseback riding, fishing village, and skywheel. On top of that, you can also visit ithe amphitheater, birdwalk, deer park, flower garden, hiking trail, lola’s garden, bamboo maze, and more.</p>
+            <p>To get there, you can usetaxis, jeepneys, or tricycles in a 50-minute ride from the city center. . If you want to spend several days exploring the surrounding areas, stay at Castle Dreams Hotel, located only 5.79 km away from the destination with easy access to other nearby destinations, such as San Pedro Cathedral and People's Park.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="content">
+        <div id="section2">
+            <img src="attr2.png" alt="" height="595px">
+        <h2>2. Dawis Beach</h2>
+            <p>Address: Digos City, Davao del Sur, Philippines</p>
+            <p>Open hours: 24 hours</p>
+            <p>Dawis Beach is a hidden gem for travelers seeking natural beauty and tranquility. This pristine beach offers powdery white sands, crystal-clear waters, and swaying coconut trees, making it an ideal spot for relaxation and beachcombing.</p>
+            <p>You can also indulge in water sports like swimming, snorkeling, kayaking, witnessing fishing activities by the pier, or exploring nearby caves and rock formations. On top of that, the accommodation choices are plenty, making it easy to stay the night away here.</p>
+            <p>To get to Dawis Beach, you can take a flight to Davao City and then a bus, a van ride, or a tricycle to Digos, followed by a short trip to the beach itself.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="content">
+        <div id="section3">
+            <img src="attr3.png" alt="" height="530">
+        <h2>3. Agong House</h2>
+            <p>Address: W86X+H3M, Barangay kapatagan South, Digos City, Philippines</p>
+            <p>Open hours: Every day, from 09:00 AM to 05:00 PM</p>
+            <p>Agong House, also known as Kublai Art Garden, is a unique and culturally rich tourist destination in Digos City, Philippines. This enchanting place offers visitors a glimpse into the vibrant Agong, a bronze musical instrument used by Mindanao’s indigenous groups, such as the Maranaos.</p>
+            <p>The highlight is the Agong House itself, a traditional tribal dwelling showcasing intricate craftsmanship. Visitors can witness mesmerizing, fairy-tale-like architecture and take photos to cherish memories.</p>
+            <p>To reach Agong House, you can take a short drive from Digos City using a tricycle or a van, making it an easily accessible and enriching cultural experience for travelers interested in immersing themselves in the local heritage.To get there, you can usetaxis, jeepneys, or tricycles in a 50-minute ride from the city center. . If you want to spend several days exploring the surrounding areas, stay at Castle Dreams Hotel, located only 5.79 km away from the destination with easy access to other nearby destinations, such as San Pedro Cathedral and People's Park.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="content">
+        <div id="section4">
+            <img src="attr4.png" alt="" height="500">
+        <h2>4. Tudeya Falls</h2>
+            <p>Address: Davao City, Davao del Sur, Philippines</p>
+            <p>Open hours: 24 hours</p>
+            <p>Tudaya Falls is a captivating natural wonder and a must-visit for nature enthusiasts. Surrounded by lush green forests, this hidden gem boasts a stunning 100-meter waterfall—the tallest waterfall in Mount Apo Natural Park—cascading into a crystal-clear pool and flows into the Sibulan River, leading to Davao Gulf.</p>
+            <p>While here, you can trek through the scenic trails, relishing the pristine beauty and taking refreshing dips in the cool waters. It's a perfect spot for picnics, photography, or simply enjoying the tranquility of nature.</p>
+            <p>To reach Tudaya Falls, you can take a short drive to Bansalan, Davao del Sur, followed by a moderate hike, which adds to the adventure.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

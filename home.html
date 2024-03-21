@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City of Digos, Philippines - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #fff;
+        }
+
+        .navbar .branding {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar img {
+            margin-right: 10px;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        .navbar p {
+            margin: 5px 0 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .navbar a {
+            color: #f2f2f2;
+            text-decoration: none;
+            padding: 14px 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            text-align: justify;
+        }
+
+        .image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 50px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #2196F3;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 5px #2195f360;
+  color: #ffffff;
+}
+
+.animated-button:active {
+  scale: 0.95;
+}
+
+.animated-button:hover span:last-child {
+  width: 200px;
+  height: 80px;
+  opacity: 1;
+}
+.animated-button.active {
+  color: #ffcc00; /* Change the color for the active state */
+}
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+  <button class="animated-button" onclick="window.location.href='index.html'">
+    <img src="pic.png" alt="Digos City Logo" height="40">
+    <div>
+        <h1>Digos City Website</h1>
+        <p>Explore the beauty of Digos, Philippines</p>
+    </div>
+</button>
+    <div class="links">
+        <button class="animated-button active" onclick="window.location.href='home.html'">
+            <span>Home</span>
+            <span></span>
+          </button>
+          <button class="animated-button" onclick="window.location.href='about.html'">
+            <span>About</span>
+            <span></span>
+          </button>
+          <button class="animated-button" onclick="window.location.href='attraction.html'">
+            <span>Attraction</span>
+            <span></span>
+          </button>
+          <button class="animated-button" onclick="window.location.href='readmore.html'">
+            <span>Read More</span>
+            <span></span>
+        </button>
+          <button class="animated-button" onclick="window.location.href='contact.html'">
+            <span>Contact</span>
+            <span></span>
+          </button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <h2>Welcome to Digos City</h2>
+        <p>Digos City is a first-class city and the capital of the province of Davao del Sur, Philippines. It is located in the southeastern part of Mindanao, known for its natural beauty and vibrant culture. Digos is a growing urban center with various attractions including parks, historical sites, and delicious local cuisine.</p>
+        <p>Whether you're interested in exploring nature, experiencing local festivals, or simply enjoying the warmth of Filipino hospitality, Digos has something to offer for everyone.</p>
+        <button class="animated-button" onclick="window.location.href='about.html'">
+          <span>Learn More.</span>
+          <span></span>
+        </button>
+    </div>
+</div>
+
+</body>
+</html>
